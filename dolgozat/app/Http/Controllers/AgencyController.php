@@ -43,15 +43,13 @@ class AgencyController extends Controller
     }
 
     public function newView()
-    {
-        $users = User::all();
-        return view('agency.new', ['users' => $users]);
+    {        
+        return view('agency.new');
     }
     public function editView($id)
-    {
-        $users = User::all();
+    {        
         $agency = Agency::find($id);
-        return view('agency.edit', ['users' => $users, 'agency' => $agency]);
+        return view('agency.edit', ['agency' => $agency]);
     }
     public function listView()
     {
