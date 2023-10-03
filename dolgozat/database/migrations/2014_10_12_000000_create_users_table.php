@@ -15,34 +15,33 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id('user_id');
             $table->string('name');
-            $table->string('email')->unique();            
+            $table->string('email')->unique();
             $table->boolean('vip');
             //$table->rememberToken();
             $table->timestamps();
         });
 
-
         User::create([
-            'name' => "Nagy Péter", 
-            'email' => 'valaki@gmail.com', 
+            'name' => "Nagy Péter",
+            'email' => 'valaki@gmail.com',
             'vip' => true
         ]);
 
         User::create([
-            'name' => "Bogdán Mária", 
-            'email' => 'mari@gmail.com', 
+            'name' => "Bogdán Mária",
+            'email' => 'mari@gmail.com',
             'vip' => true
         ]);
 
         User::create([
-            'name' => "Kis Álmos", 
-            'email' => 'szende@gmail.com', 
+            'name' => "Kis Álmos",
+            'email' => 'szende@gmail.com',
             'vip' => false
         ]);
 
         User::create([
-            'name' => "Senki Házi", 
-            'email' => 'foul.gosth@gmail.com', 
+            'name' => "Senki Házi",
+            'email' => 'foul.gosth@gmail.com',
             'vip' => false
         ]);
     }

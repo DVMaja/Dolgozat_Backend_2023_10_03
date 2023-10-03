@@ -21,20 +21,20 @@ return new class extends Migration
         });
 
         Agency::create([
-            'name' => "Fly with us", 
-            'country' => 'HU', 
+            'name' => "Fly with us",
+            'country' => 'HU',
             'type' => 'valami'
         ]);
 
         Agency::create([
-            'name' => "Busszantó", 
-            'country' => 'HU', 
+            'name' => "Busszantó",
+            'country' => 'HU',
             'type' => 'buszos cég'
         ]);
 
         Agency::create([
-            'name' => "HAj Ó De jó", 
-            'country' => 'IT', 
+            'name' => "HAj Ó De jó",
+            'country' => 'IT',
             'type' => 'hajós utak'
         ]);
     }

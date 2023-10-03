@@ -9,9 +9,7 @@ class Agency extends Model
 {
     use HasFactory;
 
-
     protected  $primaryKey = 'agency_id';
-
     protected $fillable = [
         'name',
         'country',

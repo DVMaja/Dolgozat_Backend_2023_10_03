@@ -15,29 +15,28 @@ return new class extends Migration
         Schema::create('participates', function (Blueprint $table) {
             $table->id('participate_id');
             $table->boolean('present');
-            $table->foreignId('event_id')->references('event_id')->on('events');            
+            $table->foreignId('event_id')->references('event_id')->on('events');
             $table->foreignId('user_id')->references('user_id')->on('users');
             $table->timestamps();
         });
 
         Participate::create([
-            'present' => true, 
-            'event_id'=> 1,
-            'user_id' => 1            
+            'present' => true,
+            'event_id' => 1,
+            'user_id' => 1
         ]);
 
         Participate::create([
-            'present' => true, 
-            'event_id'=> 2,
-            'user_id' => 2            
+            'present' => true,
+            'event_id' => 2,
+            'user_id' => 2
         ]);
 
         Participate::create([
-            'present' => true, 
-            'event_id'=> 3,
-            'user_id' => 3            
+            'present' => true,
+            'event_id' => 3,
+            'user_id' => 3
         ]);
-
     }
 
     /**

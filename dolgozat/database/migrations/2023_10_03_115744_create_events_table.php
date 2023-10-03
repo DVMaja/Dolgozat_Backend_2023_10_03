@@ -14,31 +14,28 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id('event_id');
-            $table->date('date');            
+            $table->date('date');
             $table->foreignId('agency_id')->references('agency_id')->on('agencies');
             $table->integer('limit');
             $table->timestamps();
         });
 
         Event::create([
-            'date' => '2023-12-04', 
-            'agency_id'=> 1,
+            'date' => '2023-12-04',
+            'agency_id' => 1,
             'limit' => 20
-            
         ]);
 
         Event::create([
-            'date' => '2023-10-23', 
-            'agency_id'=> 2,
+            'date' => '2023-10-23',
+            'agency_id' => 2,
             'limit' => 24
-            
         ]);
 
         Event::create([
-            'date' => '2023-10-27', 
-            'agency_id'=> 3,
+            'date' => '2023-10-27',
+            'agency_id' => 3,
             'limit' => 30
-            
         ]);
     }
 
