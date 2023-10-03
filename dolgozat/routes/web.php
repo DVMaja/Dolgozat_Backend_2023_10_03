@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/api/agency', [AgencyController::class, 'index']);
 Route::get('/api/agency/{id}', [AgencyController::class, 'show']);
-Route::put('/api/agency/{aid}', [AgencyController::class, 'update']);
+Route::put('/api/agency/{id}', [AgencyController::class, 'update']);
 Route::post('/api/agency', [AgencyController::class, 'store']);
 Route::delete('/api/agency/{id}', [AgencyController::class, 'destroy']);
 

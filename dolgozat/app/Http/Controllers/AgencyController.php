@@ -43,11 +43,11 @@ class AgencyController extends Controller
     }
 
     public function newView()
-    {        
+    {
         return view('agency.new');
     }
     public function editView($id)
-    {        
+    {
         $agency = Agency::find($id);
         return view('agency.edit', ['agency' => $agency]);
     }
