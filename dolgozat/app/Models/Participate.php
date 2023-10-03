@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Participate extends Model
 {
     use HasFactory;
+
+    protected  $primaryKey = 'participate_id';
+
+    protected $fillable = [
+        'present',
+        'event_id',
+        'user_id',
+    ];
 }

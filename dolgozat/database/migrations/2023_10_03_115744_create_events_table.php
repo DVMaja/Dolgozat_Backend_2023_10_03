@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Event;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,6 +19,27 @@ return new class extends Migration
             $table->integer('limit');
             $table->timestamps();
         });
+
+        Event::create([
+            'date' => '2023-12-04', 
+            'agency_id'=> 1,
+            'limit' => 20
+            
+        ]);
+
+        Event::create([
+            'date' => '2023-10-23', 
+            'agency_id'=> 2,
+            'limit' => 24
+            
+        ]);
+
+        Event::create([
+            'date' => '2023-10-27', 
+            'agency_id'=> 3,
+            'limit' => 30
+            
+        ]);
     }
 
     /**

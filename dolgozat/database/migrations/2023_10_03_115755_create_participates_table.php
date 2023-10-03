@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Participate;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,6 +19,25 @@ return new class extends Migration
             $table->foreignId('user_id')->references('user_id')->on('users');
             $table->timestamps();
         });
+
+        Participate::create([
+            'present' => true, 
+            'event_id'=> 1,
+            'user_id' => 1            
+        ]);
+
+        Participate::create([
+            'present' => true, 
+            'event_id'=> 2,
+            'user_id' => 2            
+        ]);
+
+        Participate::create([
+            'present' => true, 
+            'event_id'=> 3,
+            'user_id' => 3            
+        ]);
+
     }
 
     /**
