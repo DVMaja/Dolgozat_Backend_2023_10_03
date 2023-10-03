@@ -56,6 +56,6 @@ class AgencyController extends Controller
     public function listView()
     {
         $agencies = Agency::all();
-        return view('agencies.list', ['agencies' => $agencies]);
+        return view('agency.list', ['agencies' => $agencies]);
     }
 }
